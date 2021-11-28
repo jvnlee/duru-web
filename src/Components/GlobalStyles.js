@@ -16,6 +16,9 @@ const GlobalStyles = createGlobalStyle`
         background-color: rgba(20, 20, 20, 1);
         color: white;
     }
+    .active {
+        border-bottom: 3px solid white;
+    }
 `;
 
 export default GlobalStyles;
