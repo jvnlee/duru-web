@@ -20,9 +20,9 @@ const HeaderContainer = styled.div`
 const Title = styled.div`
   font-weight: 300;
   font-size: 30px;
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     font-size: 24px;
-  }
+  } */
 `;
 
 const LinkWrapper = styled.div`
@@ -74,7 +74,7 @@ function Header() {
         </SLink>
         <SLink
           className="nav"
-          to="anchor"
+          to="test3"
           spy={true}
           smooth="easeOutQuad"
           duration={500}
