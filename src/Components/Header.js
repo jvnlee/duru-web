@@ -1,4 +1,5 @@
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
@@ -20,6 +21,7 @@ const HeaderContainer = styled.div`
 const Title = styled.div`
   font-weight: 300;
   font-size: 30px;
+  cursor: pointer;
   /* @media (max-width: 768px) {
     font-size: 24px;
   } */
@@ -30,7 +32,7 @@ const LinkWrapper = styled.div`
   justify-content: center;
 `;
 
-const SLink = styled(Link)`
+const SLink = styled(ScrollLink)`
   margin: 0 20px;
   height: 50px;
   display: flex;
@@ -44,7 +46,9 @@ const SLink = styled(Link)`
 function Header() {
   return (
     <HeaderContainer>
-      <Title>Duru Mono</Title>
+      <Link to="/">
+        <Title>Duru Mono</Title>
+      </Link>
       <LinkWrapper>
         <SLink
           className="nav"
@@ -86,6 +90,9 @@ function Header() {
           <span>Usage</span>
         </SLink>
       </LinkWrapper>
+      <Link to="/guestbook">
+        <span>Guestbook</span>
+      </Link>
     </HeaderContainer>
   );
 }

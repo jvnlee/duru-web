@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Element, animateScroll, scrollSpy } from "react-scroll";
+import { Element, animateScroll } from "react-scroll";
 import { useState } from "react";
 
 const Container = styled.div`

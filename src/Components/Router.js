@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Home";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from "../Routes/Home";
+import Guestbook from "../Routes/Guestbook";
 import Layout from "./Layout";
 
 function DuruWebRouter() {
@@ -7,7 +8,9 @@ function DuruWebRouter() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/guestbook" element={<Guestbook />} />
+          <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </Layout>
     </BrowserRouter>
