@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Element, animateScroll } from "react-scroll";
 import { useState } from "react";
+import InitScroll from "../InitScroll";
 
 const Container = styled.div`
   padding-top: 50px;
@@ -162,100 +163,103 @@ function Home() {
   };
 
   return (
-    <Container>
-      <EmptyArea>
-        <Image src={require("../assets/preview.svg").default} alt="preview" />
-      </EmptyArea>
+    <>
+      <InitScroll />
+      <Container>
+        <EmptyArea>
+          <Image src={require("../assets/preview.svg").default} alt="preview" />
+        </EmptyArea>
 
-      <Section name="test1" className="element">
-        <Subtitle>
-          개요
-          <br />
-          Outline
-        </Subtitle>
-        <ContentWrapper>
-          <Description>
-            Duru는 영문과 한글 타이핑에 '두루' 사용될 수 있는 모노스페이스
-            폰트로, 각진 세리프와 기하학적 형태감을 바탕으로 만들어졌다.
-            소프트웨어 개발 환경에서 주로 사용되는 모노스페이스 폰트는 영문
-            위주의 디자인이 지배적이고, 한글은 보통 산세리프 계열의 기본 서체로
-            표시된다. 코드를 작성하면서 한글을 타이핑하게 되는 순간은 많지는
-            않지만, 그 때 마다 보이는 그 부자연스러움을 그냥 지나치기엔 무언가
-            아쉬운 면이 있다. 이렇게 코드 안에서 한글이 쓰여지는 몇 안되는
-            순간들에도 한글과 영문 텍스트들과 조화를 이루게 하고자 Duru가
-            탄생했다. Duru를 통해서 모노스페이스 텍스트를 작성할 때 일관된
-            느낌의 서체 사용 경험을 만들어보고자 한다.
-          </Description>
-          <ImageContainer>
-            <Image src={require("../assets/screenshot.png").default} alt="" />
-          </ImageContainer>
-        </ContentWrapper>
-      </Section>
+        <Section name="test1" className="element">
+          <Subtitle>
+            개요
+            <br />
+            Outline
+          </Subtitle>
+          <ContentWrapper>
+            <Description>
+              Duru는 영문과 한글 타이핑에 '두루' 사용될 수 있는 모노스페이스
+              폰트로, 각진 세리프와 기하학적 형태감을 바탕으로 만들어졌다.
+              소프트웨어 개발 환경에서 주로 사용되는 모노스페이스 폰트는 영문
+              위주의 디자인이 지배적이고, 한글은 보통 산세리프 계열의 기본
+              서체로 표시된다. 코드를 작성하면서 한글을 타이핑하게 되는 순간은
+              많지는 않지만, 그 때 마다 보이는 그 부자연스러움을 그냥 지나치기엔
+              무언가 아쉬운 면이 있다. 이렇게 코드 안에서 한글이 쓰여지는 몇
+              안되는 순간들에도 한글과 영문 텍스트들과 조화를 이루게 하고자
+              Duru가 탄생했다. Duru를 통해서 모노스페이스 텍스트를 작성할 때
+              일관된 느낌의 서체 사용 경험을 만들어보고자 한다.
+            </Description>
+            <ImageContainer>
+              <Image src={require("../assets/screenshot.png").default} alt="" />
+            </ImageContainer>
+          </ContentWrapper>
+        </Section>
 
-      <Section name="test2" className="element">
-        <Subtitle>
-          특징
-          <br />
-          Features
-        </Subtitle>
-        <Image src={require("../assets/typing-01.svg").default} alt="" />
-      </Section>
+        <Section name="test2" className="element">
+          <Subtitle>
+            특징
+            <br />
+            Features
+          </Subtitle>
+          <Image src={require("../assets/typing-01.svg").default} alt="" />
+        </Section>
 
-      <Section id="test3" className="element">
-        <Subtitle>
-          사용
-          <br />
-          Usage
-        </Subtitle>
-        <LangBox>
-          <LangBar>
-            {LANG_ARR.map((element, index) => (
-              <LangTab
-                key={index}
-                onClick={() => onTabClick(index)}
-                className={currentTab === index ? "selected" : null}
-              >
-                <span>{element}</span>
-              </LangTab>
-            ))}
-          </LangBar>
-          <Code
-            src={require(`../assets/${currentTab}.svg`).default}
-            alt="code example"
-          />
-        </LangBox>
-      </Section>
-
-      <Section>
-        <Subtitle>
-          타입 포스터
-          <br />
-          Type Poster
-        </Subtitle>
-        <PosterWrapper>
-          <PosterContainer>
-            <Image
-              src={require("../assets/poster1.png").default}
-              alt="poster"
+        <Section id="test3" className="element">
+          <Subtitle>
+            사용
+            <br />
+            Usage
+          </Subtitle>
+          <LangBox>
+            <LangBar>
+              {LANG_ARR.map((element, index) => (
+                <LangTab
+                  key={index}
+                  onClick={() => onTabClick(index)}
+                  className={currentTab === index ? "selected" : null}
+                >
+                  <span>{element}</span>
+                </LangTab>
+              ))}
+            </LangBar>
+            <Code
+              src={require(`../assets/${currentTab}.svg`).default}
+              alt="code example"
             />
-          </PosterContainer>
-          <PosterContainer>
-            <Image
-              src={require("../assets/poster2.png").default}
-              alt="poster"
-            />
-          </PosterContainer>
-        </PosterWrapper>
-      </Section>
+          </LangBox>
+        </Section>
 
-      {/* <EmptyArea>Empty Area</EmptyArea> */}
+        <Section>
+          <Subtitle>
+            타입 포스터
+            <br />
+            Type Poster
+          </Subtitle>
+          <PosterWrapper>
+            <PosterContainer>
+              <Image
+                src={require("../assets/poster1.png").default}
+                alt="poster"
+              />
+            </PosterContainer>
+            <PosterContainer>
+              <Image
+                src={require("../assets/poster2.png").default}
+                alt="poster"
+              />
+            </PosterContainer>
+          </PosterWrapper>
+        </Section>
 
-      <BtnWrapper>
-        <Btn onClick={scrollToTop}>
-          <Image src={require("../assets/arrow.svg").default} alt="" />
-        </Btn>
-      </BtnWrapper>
-    </Container>
+        {/* <EmptyArea>Empty Area</EmptyArea> */}
+
+        <BtnWrapper>
+          <Btn onClick={scrollToTop}>
+            <Image src={require("../assets/arrow.svg").default} alt="" />
+          </Btn>
+        </BtnWrapper>
+      </Container>
+    </>
   );
 }
 

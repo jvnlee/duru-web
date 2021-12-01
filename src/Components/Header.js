@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import styled from "styled-components";
+import { useLocation } from "react-router";
 
 const HeaderContainer = styled.div`
   width: 100vw;
@@ -44,55 +45,64 @@ const SLink = styled(ScrollLink)`
 `;
 
 function Header() {
+  const { pathname } = useLocation();
   return (
     <HeaderContainer>
       <Link to="/">
         <Title>Duru Mono</Title>
       </Link>
-      <LinkWrapper>
-        <SLink
-          className="nav"
-          to="test1"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-50}
-          activeClass="active"
-          onSetActive={() => (document.title = "Duru | Outline")}
-          // onSetInactive={() => (document.title = "Duru")}
-        >
-          <span>Outline</span>
-        </SLink>
-        <SLink
-          className="nav"
-          to="test2"
-          spy={true}
-          smooth="easeOutQuad"
-          duration={500}
-          offset={-50}
-          activeClass="active"
-          onSetActive={() => (document.title = "Duru | Features")}
-          // onSetInactive={() => (document.title = "Duru")}
-        >
-          <span>Features</span>
-        </SLink>
-        <SLink
-          className="nav"
-          to="test3"
-          spy={true}
-          smooth="easeOutQuad"
-          duration={500}
-          offset={-50}
-          activeClass="active"
-          onSetActive={() => (document.title = "Duru | Usage")}
-          // onSetInactive={() => (document.title = "Duru")}
-        >
-          <span>Usage</span>
-        </SLink>
-      </LinkWrapper>
-      <Link to="/guestbook">
-        <span>Guestbook</span>
-      </Link>
+      {pathname === "/" ? (
+        <>
+          <LinkWrapper>
+            <SLink
+              className="nav"
+              to="test1"
+              spy={true}
+              smooth={true}
+              duration={800}
+              offset={-50}
+              activeClass="active"
+              onSetActive={() => (document.title = "Duru | Outline")}
+              onSetInactive={() => (document.title = "Duru")}
+            >
+              <span>Outline</span>
+            </SLink>
+            <SLink
+              className="nav"
+              to="test2"
+              spy={true}
+              smooth={true}
+              duration={800}
+              offset={-50}
+              activeClass="active"
+              onSetActive={() => (document.title = "Duru | Features")}
+              onSetInactive={() => (document.title = "Duru")}
+            >
+              <span>Features</span>
+            </SLink>
+            <SLink
+              className="nav"
+              to="test3"
+              spy={true}
+              smooth={true}
+              duration={800}
+              offset={-50}
+              activeClass="active"
+              onSetActive={() => (document.title = "Duru | Usage")}
+              onSetInactive={() => (document.title = "Duru")}
+            >
+              <span>Usage</span>
+            </SLink>
+          </LinkWrapper>
+          <Link to="/guestbook">
+            <span>Guestbook</span>
+          </Link>
+        </>
+      ) : (
+        <Link to="/">
+          <span>Back to home</span>
+        </Link>
+      )}
     </HeaderContainer>
   );
 }

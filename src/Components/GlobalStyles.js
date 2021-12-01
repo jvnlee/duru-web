@@ -7,6 +7,9 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+    input, textarea, button {
+        all: unset;
+    }
     * {
         box-sizing: border-box;
     }
