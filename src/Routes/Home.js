@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { animateScroll } from "react-scroll";
 import { Helmet } from "react-helmet-async";
 import useInitScroll from "../hooks/useInitScroll";
-import useScrollFadeIn from "../hooks/useScrollFadeIn";
 import Section1 from "../Components/Section1";
 import Section2 from "../Components/Section2";
 import Section3 from "../Components/Section3";
@@ -62,7 +61,7 @@ function Home() {
       </Helmet>
       <Container>
         <EmptyArea>
-          <Image src={require("../assets/preview.svg").default} alt="preview" />
+          <Image src={require("../assets/main.svg").default} alt="main" />
         </EmptyArea>
 
         <Section1 />

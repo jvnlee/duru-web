@@ -14,16 +14,13 @@ export const Section = styled(Element)`
 
 export const Image = styled.img`
   width: 100%;
-  /* margin-top: 50px; */
+  /* margin-bottom: 80px; */
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
-  justify-content: flex;
-  /* align-items: stretch; */
-  @media (max-width: 1800px) {
-    flex-direction: column;
-  }
+  justify-content: space-between;
+  align-items: stretch;
 `;
 
 export const Separator = styled.div`
@@ -35,7 +32,7 @@ export const Separator = styled.div`
 export const Subtitle = styled.h2`
   display: block;
   color: #ffffff;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   font-size: 40px;
   line-height: 1.5em;
   @media (max-width: 768px) {
@@ -43,24 +40,28 @@ export const Subtitle = styled.h2`
   }
 `;
 
+export const Heading = styled.h3`
+  display: block;
+  font-size: 30px;
+  margin-bottom: 50px;
+`;
+
 export const Description = styled.p`
   display: block;
-  max-width: 800px;
-  margin-top: 80px;
+  width: 25%;
   text-align: left;
   font-size: 24px;
   line-height: 1.8em;
-  @media (max-width: 768px) {
-    margin-top: 50px;
-    font-size: 18px;
-  }
 `;
 
 export const ImageContainer = styled.div`
-  width: calc(100vw - 800px);
-  min-width: 300px;
+  width: 70%;
   height: 100%;
-  @media (max-width: 1800px) {
-    width: calc(100vw - 100px);
-  }
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Blank = styled.div`
+  width: 100%;
+  height: 300px;
 `;
