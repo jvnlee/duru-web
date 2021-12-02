@@ -42,6 +42,13 @@ const SLink = styled(ScrollLink)`
     font-size: 18px;
     font-weight: 300;
   }
+  cursor: pointer;
+`;
+
+const Nav = styled.span`
+  font-size: 18px;
+  font-weight: 300;
+  margin-right: 15px;
 `;
 
 function Header() {
@@ -95,12 +102,12 @@ function Header() {
             </SLink>
           </LinkWrapper>
           <Link to="/guestbook">
-            <span>Guestbook</span>
+            <Nav>Guestbook</Nav>
           </Link>
         </>
       ) : (
         <Link to="/">
-          <span>Back to home</span>
+          <Nav>Back to home</Nav>
         </Link>
       )}
     </HeaderContainer>

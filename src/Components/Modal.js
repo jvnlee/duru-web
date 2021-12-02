@@ -8,7 +8,7 @@ import {
   updateDoc,
   where,
 } from "@firebase/firestore";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
 import { dbService } from "../myFirebase";
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 const ModalContainer = styled.div`
   width: 100%;
   max-width: 400px;
-  height: 200px;
+  height: auto;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -54,11 +54,17 @@ const Cta = styled.span`
 
 const SPasswordInput = styled(PasswordInput)`
   text-align: center;
-  height: 60px;
-  margin-bottom: 0;
+  height: 50px;
+  margin-bottom: 10px;
+`;
+
+const SSubmitButton = styled(SubmitButton)`
+  position: relative;
 `;
 
 const ErrorText = styled.span`
+  display: block;
+  margin-bottom: 15px;
   color: red;
   text-align: center;
 `;
@@ -103,14 +109,16 @@ const DeleteButton = styled.div`
 `;
 
 function Modal({ id, setModal, title, payload }) {
-  let querySnapshot;
-  const findDoc = async () => {
-    const ref = collection(dbService, "messages");
-    const q = query(ref, where(documentId(), "==", id));
-    querySnapshot = await getDocs(q);
-  };
-  findDoc();
-  const docRef = doc(dbService, "messages", id);
+  const querySnapshot = useRef(null);
+
+  useEffect(() => {
+    const findDoc = async () => {
+      const ref = collection(dbService, "messages");
+      const q = query(ref, where(documentId(), "==", id));
+      querySnapshot.current = await getDocs(q);
+    };
+    findDoc();
+  }, [id]);
 
   const {
     register,
@@ -119,7 +127,7 @@ function Modal({ id, setModal, title, payload }) {
     getValues,
     setError,
     clearErrors,
-  } = useForm({ mode: "onChange", shouldUnregister: false });
+  } = useForm({ mode: "onChange" });
 
   const handleClick = (event) => {
     setModal(false);
@@ -133,7 +141,7 @@ function Modal({ id, setModal, title, payload }) {
 
   const onValidSubmit = async () => {
     const { password } = getValues();
-    if (querySnapshot?.docs[0].data().password !== password) {
+    if (querySnapshot.current?.docs[0].data().password !== password) {
       setError("passwordError", {
         message: "비밀번호가 일치하지 않습니다.",
       });
@@ -156,6 +164,8 @@ function Modal({ id, setModal, title, payload }) {
       payload,
     },
   });
+
+  const docRef = doc(dbService, "messages", id);
 
   const onValidEditSubmit = async () => {
     const { title, payload } = getEditedValues();
@@ -203,12 +213,12 @@ function Modal({ id, setModal, title, payload }) {
               {...register("password", { required: true })}
               type="password"
               placeholder="입력"
-              onFocus={() => clearErrors("passwordError")}
+              onChange={() => clearErrors("passwordError")}
             />
-            {errors ? (
+            {errors.passwordError ? (
               <ErrorText>{errors?.passwordError?.message}</ErrorText>
             ) : null}
-            <SubmitButton type="submit" value="확인" disabled={!isValid} />
+            <SSubmitButton type="submit" value="확인" disabled={!isValid} />
           </Form>
         </ModalContainer>
       )}

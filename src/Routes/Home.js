@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { Element, animateScroll } from "react-scroll";
 import { useState } from "react";
-import InitScroll from "../InitScroll";
+import { Helmet } from "react-helmet-async";
+import { Separator, Subtitle } from "../Components/shared";
+import useInitScroll from "../hooks/useInitScroll";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const Container = styled.div`
   padding-top: 50px;
@@ -10,18 +13,12 @@ const Container = styled.div`
 
 const Section = styled(Element)`
   padding: 50px 50px;
-  height: 3000px;
+  height: auto;
   border-bottom: 1px solid gray;
-`;
-
-const Subtitle = styled.h2`
-  display: block;
-  color: #ffffff;
-  font-size: 40px;
-  line-height: 1.3em;
-  @media (max-width: 768px) {
-    font-size: 32px;
+  :nth-child(5) {
+    border: none;
   }
+  overflow: hidden;
 `;
 
 const ContentWrapper = styled.div`
@@ -129,6 +126,7 @@ const BtnWrapper = styled.div`
   position: fixed;
   bottom: 30px;
   right: 30px;
+  cursor: pointer;
 `;
 
 const Btn = styled.div`
@@ -142,6 +140,10 @@ const Btn = styled.div`
 `;
 
 function Home() {
+  useInitScroll();
+
+  const aPoster1 = useScrollFadeIn("up", 1, 0);
+  const aPoster2 = useScrollFadeIn("up", 1, 0.4);
   const scrollToTop = () => {
     animateScroll.scrollToTop();
   };
@@ -164,17 +166,20 @@ function Home() {
 
   return (
     <>
-      <InitScroll />
+      <Helmet>
+        <title>Duru</title>
+      </Helmet>
       <Container>
         <EmptyArea>
           <Image src={require("../assets/preview.svg").default} alt="preview" />
         </EmptyArea>
 
         <Section name="test1" className="element">
+          <Separator />
           <Subtitle>
-            개요
-            <br />
             Outline
+            <br />
+            개요
           </Subtitle>
           <ContentWrapper>
             <Description>
@@ -196,6 +201,7 @@ function Home() {
         </Section>
 
         <Section name="test2" className="element">
+          <Separator />
           <Subtitle>
             특징
             <br />
@@ -205,6 +211,7 @@ function Home() {
         </Section>
 
         <Section id="test3" className="element">
+          <Separator />
           <Subtitle>
             사용
             <br />
@@ -230,19 +237,20 @@ function Home() {
         </Section>
 
         <Section>
+          <Separator />
           <Subtitle>
             타입 포스터
             <br />
             Type Poster
           </Subtitle>
           <PosterWrapper>
-            <PosterContainer>
+            <PosterContainer {...aPoster1}>
               <Image
                 src={require("../assets/poster1.png").default}
                 alt="poster"
               />
             </PosterContainer>
-            <PosterContainer>
+            <PosterContainer {...aPoster2}>
               <Image
                 src={require("../assets/poster2.png").default}
                 alt="poster"
@@ -251,7 +259,7 @@ function Home() {
           </PosterWrapper>
         </Section>
 
-        {/* <EmptyArea>Empty Area</EmptyArea> */}
+        <EmptyArea></EmptyArea>
 
         <BtnWrapper>
           <Btn onClick={scrollToTop}>

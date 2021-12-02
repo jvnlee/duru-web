@@ -10,15 +10,31 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react/cjs/react.development";
 import styled from "styled-components";
 import { dbService } from "../myFirebase";
-import InitScroll from "../InitScroll";
-import { Helmet } from "react-helmet";
 import Message from "../Components/Message";
-import { Form, PasswordInput, SubmitButton } from "../Components/shared";
+import {
+  Form,
+  PasswordInput,
+  Separator,
+  SubmitButton,
+  Subtitle,
+} from "../Components/shared";
+import { Helmet } from "react-helmet-async";
+import useInitScroll from "../hooks/useInitScroll";
 
 const Container = styled.div`
-  padding: 70px 50px 50px;
+  padding: 90px 50px 50px;
   min-height: 100vh;
   max-height: auto;
+`;
+
+const SSubtitle = styled(Subtitle)`
+  margin-bottom: 0;
+`;
+
+const Text = styled.h3`
+  font-weight: 300;
+  font-size: 20px;
+  margin: 15px 0 60px;
 `;
 
 const MessageCreator = styled.div`
@@ -55,6 +71,8 @@ const MessageGrid = styled.div`
 `;
 
 function Guestbook() {
+  useInitScroll();
+
   const [messages, setMessages] = useState([]);
   const {
     register,
@@ -108,8 +126,13 @@ function Guestbook() {
       <Helmet>
         <title>Duru | Guestbook</title>
       </Helmet>
-      <InitScroll />
       <Container>
+        <Separator />
+        <SSubtitle>Guestbook</SSubtitle>
+        <Text>
+          전시 방문해셔서 감사합니다! 이곳에 방명록 남겨주시면 제가 수시로
+          확인하겠습니다. 🙇‍♂️
+        </Text>
         <MessageGrid>
           <MessageCreator>
             <Form onSubmit={handleSubmit(onValidSubmit)}>

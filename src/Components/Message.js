@@ -2,6 +2,7 @@ import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import styled from "styled-components";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 import Modal from "./Modal";
 
 const MessageContainer = styled.div`
@@ -28,6 +29,15 @@ const MessageTitle = styled.h2`
   font-size: 24px;
 `;
 
+const Icon = styled.div`
+  cursor: pointer;
+  color: gray;
+  :hover {
+    color: black;
+    transition: color 0.5s ease-in-out;
+  }
+`;
+
 const Payload = styled.span`
   height: 170px;
   display: block;
@@ -50,6 +60,7 @@ const DateText = styled.span`
 `;
 
 function Message({ message }) {
+  const animatedItem = useScrollFadeIn("up", 1, Math.random());
   const TimeBefore = (timestamp) => {
     const diff = (Date.now() - parseInt(timestamp)) / 1000;
     if (diff < 30) {
@@ -71,17 +82,14 @@ function Message({ message }) {
 
   return (
     <>
-      <MessageContainer>
+      <MessageContainer {...animatedItem}>
         <TitleWrapper>
           <MessageTitle>
             {message.title ? message.title : "Untitled"}
           </MessageTitle>
-          <FontAwesomeIcon
-            icon={faEllipsisH}
-            size="lg"
-            style={{ color: "gray", cursor: "pointer" }}
-            onClick={() => setModal(true)}
-          />
+          <Icon onClick={() => setModal(true)}>
+            <FontAwesomeIcon icon={faEllipsisH} size="lg" />
+          </Icon>
         </TitleWrapper>
         <Payload>{message.payload}</Payload>
         <DateText>{TimeBefore(message.createdAt)}</DateText>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
-function InitScroll() {
+function useInitScroll() {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -11,4 +11,4 @@ function InitScroll() {
   return null;
 }
 
-export default InitScroll;
+export default useInitScroll;
