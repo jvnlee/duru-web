@@ -12,6 +12,7 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9998;
   @media (max-width: 768px) {
     .nav {
       display: none;

@@ -11,15 +11,14 @@ import { useEffect } from "react/cjs/react.development";
 import styled from "styled-components";
 import { dbService } from "../myFirebase";
 import Message from "../Components/Message";
+import { Helmet } from "react-helmet-async";
+import useInitScroll from "../hooks/useInitScroll";
+import { Separator, Subtitle } from "../Components/shared/SectionComponents";
 import {
   Form,
   PasswordInput,
-  Separator,
   SubmitButton,
-  Subtitle,
-} from "../Components/shared";
-import { Helmet } from "react-helmet-async";
-import useInitScroll from "../hooks/useInitScroll";
+} from "../Components/shared/FormComponents";
 
 const Container = styled.div`
   padding: 90px 50px 50px;

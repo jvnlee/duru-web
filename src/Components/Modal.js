@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
 import { dbService } from "../myFirebase";
-import { Form, PasswordInput, SubmitButton } from "./shared";
+import { Form, PasswordInput, SubmitButton } from "./shared/FormComponents";
 
 const Backdrop = styled.div`
   width: 100vw;

@@ -1,22 +1,5 @@
 import styled, { css } from "styled-components";
 
-export const Separator = styled.div`
-  width: 30px;
-  height: 20px;
-  border-top: 4px solid white;
-`;
-
-export const Subtitle = styled.h2`
-  display: block;
-  color: #ffffff;
-  margin-bottom: 100px;
-  font-size: 40px;
-  line-height: 1.3em;
-  @media (max-width: 768px) {
-    font-size: 32px;
-  }
-`;
-
 export const Form = styled.form`
   height: 100%;
   display: flex;

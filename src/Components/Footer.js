@@ -46,10 +46,13 @@ function Footer() {
           Hyun Jun Lee, 2021
         </Text>
         <IconLink href="https://github.com/jvnlee">
-          <FontAwesomeIcon icon={faGithub} size="3x" />
+          <FontAwesomeIcon icon={faGithub} style={{ fontSize: "40px" }} />
         </IconLink>
-        <IconLink href="https://instagram.com/jvnlee">
-          <FontAwesomeIcon icon={faInstagram} size="3x" />
+        <IconLink
+          href="https://instagram.com/jvnlee"
+          style={{ fontSize: "44px" }}
+        >
+          <FontAwesomeIcon icon={faInstagram} />
         </IconLink>
       </Wrapper>
       <Logo src={require("../assets/hivcdlogo.svg").default} alt="hivcdlogo" />
