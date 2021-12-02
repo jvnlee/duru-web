@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.js": "/duru-web/static/js/main.bffeea1e.chunk.js",
+    "main.js.map": "/duru-web/static/js/main.bffeea1e.chunk.js.map",
+    "runtime-main.js": "/duru-web/static/js/runtime-main.a14013a5.js",
+    "runtime-main.js.map": "/duru-web/static/js/runtime-main.a14013a5.js.map",
+    "static/js/2.ed6b7c20.chunk.js": "/duru-web/static/js/2.ed6b7c20.chunk.js",
+    "static/js/2.ed6b7c20.chunk.js.map": "/duru-web/static/js/2.ed6b7c20.chunk.js.map",
+    "index.html": "/duru-web/index.html",
+    "static/js/2.ed6b7c20.chunk.js.LICENSE.txt": "/duru-web/static/js/2.ed6b7c20.chunk.js.LICENSE.txt",
+    "static/media/arrow-func.svg": "/duru-web/static/media/arrow-func.e3741c95.svg",
+    "static/media/arrow.svg": "/duru-web/static/media/arrow.2b220f8b.svg",
+    "static/media/auto-ligature.svg": "/duru-web/static/media/auto-ligature.f5de6ebb.svg",
+    "static/media/cap-gap.svg": "/duru-web/static/media/cap-gap.d625243e.svg",
+    "static/media/code-sample.png": "/duru-web/static/media/code-sample.4b399e44.png",
+    "static/media/distinguish.svg": "/duru-web/static/media/distinguish.78476115.svg",
+    "static/media/hivcdlogo.svg": "/duru-web/static/media/hivcdlogo.d50ceef7.svg",
+    "static/media/javaexample3.svg": "/duru-web/static/media/javaexample3.44fea161.svg",
+    "static/media/jsexample.svg": "/duru-web/static/media/jsexample.a663f272.svg",
+    "static/media/kotlinexample.svg": "/duru-web/static/media/kotlinexample.4e244e60.svg",
+    "static/media/lowercase.svg": "/duru-web/static/media/lowercase.6c571c5b.svg",
+    "static/media/main.svg": "/duru-web/static/media/main.d597decd.svg",
+    "static/media/num.svg": "/duru-web/static/media/num.414df0d8.svg",
+    "static/media/outline-main.svg": "/duru-web/static/media/outline-main.c76917e8.svg",
+    "static/media/poster1.png": "/duru-web/static/media/poster1.3119884d.png",
+    "static/media/poster2.png": "/duru-web/static/media/poster2.878b5e97.png",
+    "static/media/serif-circled.svg": "/duru-web/static/media/serif-circled.6df070fb.svg",
+    "static/media/uppercase.svg": "/duru-web/static/media/uppercase.7c067b4f.svg",
+    "static/media/x-height.svg": "/duru-web/static/media/x-height.42234538.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a14013a5.js",
+    "static/js/2.ed6b7c20.chunk.js",
+    "static/js/main.bffeea1e.chunk.js"
+  ]
+}
