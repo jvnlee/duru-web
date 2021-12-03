@@ -31,19 +31,19 @@ function Section3() {
         />
       </SImageContainer>
       <Blank />
-      <Heading>Java (자바)</Heading>
-      <SImageContainer>
-        <Image
-          src={require("../assets/javaexample3.svg").default}
-          alt="javaexample"
-        />
-      </SImageContainer>
-      <Blank />
       <Heading>Kotlin (코틀린)</Heading>
       <SImageContainer>
         <Image
           src={require("../assets/kotlinexample.svg").default}
           alt="kotlinexample"
+        />
+      </SImageContainer>
+      <Blank />
+      <Heading>Java (자바)</Heading>
+      <SImageContainer>
+        <Image
+          src={require("../assets/javaexample3.svg").default}
+          alt="javaexample"
         />
       </SImageContainer>
     </Section>
