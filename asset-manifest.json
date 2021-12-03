@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.ffd31008.chunk.js",
-    "main.js.map": "/static/js/main.ffd31008.chunk.js.map",
+    "main.js": "/static/js/main.088f8f02.chunk.js",
+    "main.js.map": "/static/js/main.088f8f02.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9d66d66d.js",
     "runtime-main.js.map": "/static/js/runtime-main.9d66d66d.js.map",
-    "static/js/2.157f350b.chunk.js": "/static/js/2.157f350b.chunk.js",
-    "static/js/2.157f350b.chunk.js.map": "/static/js/2.157f350b.chunk.js.map",
+    "static/js/2.ea390a19.chunk.js": "/static/js/2.ea390a19.chunk.js",
+    "static/js/2.ea390a19.chunk.js.map": "/static/js/2.ea390a19.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.157f350b.chunk.js.LICENSE.txt": "/static/js/2.157f350b.chunk.js.LICENSE.txt",
+    "static/js/2.ea390a19.chunk.js.LICENSE.txt": "/static/js/2.ea390a19.chunk.js.LICENSE.txt",
     "static/media/arrow-func.svg": "/static/media/arrow-func.e3741c95.svg",
     "static/media/arrow.svg": "/static/media/arrow.2b220f8b.svg",
     "static/media/auto-ligature.svg": "/static/media/auto-ligature.f5de6ebb.svg",
@@ -30,7 +30,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.9d66d66d.js",
-    "static/js/2.157f350b.chunk.js",
-    "static/js/main.ffd31008.chunk.js"
+    "static/js/2.ea390a19.chunk.js",
+    "static/js/main.088f8f02.chunk.js"
   ]
 }
