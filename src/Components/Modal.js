@@ -139,7 +139,7 @@ function Modal({ id, setModal, title, payload }) {
 
   const [passwordTest, setPasswordTest] = useState(false);
 
-  const onValidSubmit = async () => {
+  const onValidSubmit = () => {
     const { password } = getValues();
     if (querySnapshot.current?.docs[0].data().password !== password) {
       setError("passwordError", {
