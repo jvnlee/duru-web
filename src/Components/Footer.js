@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const FooterContainer = styled.div`
   height: 160px;
-  padding: 30px;
+  padding: 20px 30px;
   background-color: #030305;
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,6 @@ const Wrapper = styled.div`
 
 const Text = styled.span`
   display: block;
-  font-size: 16px;
   font-weight: 300;
   line-height: 22px;
   margin-right: 15px;
@@ -31,8 +30,9 @@ const IconLink = styled.a`
 `;
 
 const Logo = styled.img`
-  width: 50px;
-  height: 50px;
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
   opacity: 0.5;
 `;
 
@@ -41,7 +41,7 @@ function Footer() {
     <FooterContainer>
       <Wrapper>
         <Text>
-          Designed and developed by
+          Font design and Web development by
           <br />
           Hyun Jun Lee, 2021
         </Text>

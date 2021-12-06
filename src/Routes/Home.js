@@ -63,12 +63,10 @@ function Home() {
         <EmptyArea>
           <Image src={require("../assets/main.svg").default} alt="main" />
         </EmptyArea>
-
         <Section1 />
         <Section2 />
         <Section3 />
         <Section4 />
-
         <BtnWrapper>
           <Btn onClick={scrollToTop}>
             <Image src={require("../assets/arrow.svg").default} alt="" />

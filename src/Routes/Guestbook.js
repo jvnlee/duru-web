@@ -50,7 +50,7 @@ const TitleInput = styled.input`
 `;
 
 const TextArea = styled.textarea`
-  height: 200px;
+  height: 150px;
   margin: 0 20px 20px;
   font-size: 20px;
   line-height: 1.5em;
