@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.fffdf2aa.chunk.js",
-    "main.js.map": "/static/js/main.fffdf2aa.chunk.js.map",
+    "main.js": "/static/js/main.f2f6890b.chunk.js",
+    "main.js.map": "/static/js/main.f2f6890b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9d66d66d.js",
     "runtime-main.js.map": "/static/js/runtime-main.9d66d66d.js.map",
-    "static/js/2.936c607b.chunk.js": "/static/js/2.936c607b.chunk.js",
-    "static/js/2.936c607b.chunk.js.map": "/static/js/2.936c607b.chunk.js.map",
+    "static/js/2.3182d874.chunk.js": "/static/js/2.3182d874.chunk.js",
+    "static/js/2.3182d874.chunk.js.map": "/static/js/2.3182d874.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.936c607b.chunk.js.LICENSE.txt": "/static/js/2.936c607b.chunk.js.LICENSE.txt",
+    "static/js/2.3182d874.chunk.js.LICENSE.txt": "/static/js/2.3182d874.chunk.js.LICENSE.txt",
     "static/media/arrow-func.svg": "/static/media/arrow-func.e3741c95.svg",
     "static/media/arrow.svg": "/static/media/arrow.2b220f8b.svg",
     "static/media/auto-ligature.svg": "/static/media/auto-ligature.f5de6ebb.svg",
@@ -20,17 +20,30 @@
     "static/media/kotlinexample.svg": "/static/media/kotlinexample.4e244e60.svg",
     "static/media/lowercase.svg": "/static/media/lowercase.6c571c5b.svg",
     "static/media/main.svg": "/static/media/main.d597decd.svg",
+    "static/media/noto-sans-kr-v21-korean-300.04076a7a.woff": "/static/media/noto-sans-kr-v21-korean-300.04076a7a.woff",
+    "static/media/noto-sans-kr-v21-korean-300.a20f48e3.woff2": "/static/media/noto-sans-kr-v21-korean-300.a20f48e3.woff2",
+    "static/media/noto-sans-kr-v21-korean-500.7046fe21.woff": "/static/media/noto-sans-kr-v21-korean-500.7046fe21.woff",
+    "static/media/noto-sans-kr-v21-korean-500.fd0109d8.woff2": "/static/media/noto-sans-kr-v21-korean-500.fd0109d8.woff2",
+    "static/media/noto-sans-kr-v21-korean-regular.d67ecb29.woff2": "/static/media/noto-sans-kr-v21-korean-regular.d67ecb29.woff2",
+    "static/media/noto-sans-kr-v21-korean-regular.fb3fc42e.woff": "/static/media/noto-sans-kr-v21-korean-regular.fb3fc42e.woff",
     "static/media/num.svg": "/static/media/num.414df0d8.svg",
     "static/media/outline-main.svg": "/static/media/outline-main.44e268bb.svg",
     "static/media/poster1.svg": "/static/media/poster1.0d17ab9a.svg",
     "static/media/poster2.svg": "/static/media/poster2.5174f295.svg",
+    "static/media/readex-pro-v5-latin-300.890f0d52.woff2": "/static/media/readex-pro-v5-latin-300.890f0d52.woff2",
+    "static/media/readex-pro-v5-latin-300.c568e9c1.woff": "/static/media/readex-pro-v5-latin-300.c568e9c1.woff",
+    "static/media/readex-pro-v5-latin-500.58c812cd.woff": "/static/media/readex-pro-v5-latin-500.58c812cd.woff",
+    "static/media/readex-pro-v5-latin-500.6e154cfc.woff2": "/static/media/readex-pro-v5-latin-500.6e154cfc.woff2",
+    "static/media/readex-pro-v5-latin-regular.c68f113b.woff": "/static/media/readex-pro-v5-latin-regular.c68f113b.woff",
+    "static/media/readex-pro-v5-latin-regular.e3dde6d8.woff2": "/static/media/readex-pro-v5-latin-regular.e3dde6d8.woff2",
     "static/media/serif-circled.svg": "/static/media/serif-circled.6df070fb.svg",
+    "static/media/title.svg": "/static/media/title.bafdb76c.svg",
     "static/media/uppercase.svg": "/static/media/uppercase.7c067b4f.svg",
     "static/media/x-height.svg": "/static/media/x-height.42234538.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.9d66d66d.js",
-    "static/js/2.936c607b.chunk.js",
-    "static/js/main.fffdf2aa.chunk.js"
+    "static/js/2.3182d874.chunk.js",
+    "static/js/main.f2f6890b.chunk.js"
   ]
 }
