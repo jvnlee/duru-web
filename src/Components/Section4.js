@@ -1,11 +1,20 @@
 import styled from "styled-components";
 import {
+  Description,
   Heading,
   Image,
   Section,
   Separator,
   Subtitle,
 } from "./shared/SectionComponents";
+
+const SHeading = styled(Heading)`
+  margin-bottom: 10px;
+`;
+
+const SDescription = styled(Description)`
+  margin-bottom: 40px;
+`;
 
 const PosterWrapper = styled.div`
   width: 100%;
@@ -24,7 +33,8 @@ function Section4() {
     <Section>
       <Separator />
       <Subtitle>Extra</Subtitle>
-      <Heading>Type Poster</Heading>
+      <SHeading>Type Poster</SHeading>
+      <SDescription>Size: A1 (594mm × 841mm)</SDescription>
       <PosterWrapper>
         <PosterContainer>
           <Image src={require("../assets/poster1.svg").default} alt="poster" />

@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Noto Sans KR', 'Readex Pro';
         font-size: 14px;
         background-color: #0f111a;
         color: white;

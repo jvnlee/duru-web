@@ -17,6 +17,11 @@ const Wrapper = styled.div`
   opacity: 0.5;
 `;
 
+const Logo = styled.img`
+  height: 30px;
+  margin-right: 15px;
+`;
+
 const Text = styled.span`
   display: block;
   font-weight: 300;
@@ -29,7 +34,7 @@ const IconLink = styled.a`
   margin-right: 15px;
 `;
 
-const Logo = styled.img`
+const SchoolLogo = styled.img`
   margin-top: 5px;
   width: 40px;
   height: 40px;
@@ -40,6 +45,7 @@ function Footer() {
   return (
     <FooterContainer>
       <Wrapper>
+        <Logo src={require("../assets/title.svg").default} alt="title" />
         <Text>
           Font design and Web development by
           <br />
@@ -55,7 +61,10 @@ function Footer() {
           <FontAwesomeIcon icon={faInstagram} />
         </IconLink>
       </Wrapper>
-      <Logo src={require("../assets/hivcdlogo.svg").default} alt="hivcdlogo" />
+      <SchoolLogo
+        src={require("../assets/hivcdlogo.svg").default}
+        alt="hivcdlogo"
+      />
     </FooterContainer>
   );
 }

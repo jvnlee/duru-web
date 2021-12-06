@@ -63,7 +63,7 @@ function Section2() {
       <Blank />
       <ContentWrapper>
         <Description>
-          식별성과 가독성을 높이기 위해 소문자의 속공간을 기존 모노스페이스
+          식별성과 가독성을 높이기 위해 소문자의 속공간 폭을 기존 모노스페이스
           서체들에 비해 넓게 가져갔고, x-height 또한 충분히 확보하려고 했다.
         </Description>
         <ImageContainer>
@@ -76,8 +76,9 @@ function Section2() {
       <Blank />
       <ContentWrapper>
         <Description>
-          대문자는 주어진 고정폭을 가득 채우는 방식을 택했는데, 왼편에 존재하는
-          세리프가 있어 꽉 찬 글자들을 나란히 써도 획이 겹쳐보이지 않는다.
+          대문자는 소문자에 비해 주어진 글자 틀을 가득 채우는듯한 인상이 강한데,
+          왼편에 존재하는 세리프가 있어 꽉 찬 글자들을 나란히 써도 획이
+          겹쳐보이지 않는다.
         </Description>
         <ImageContainer>
           <Image src={require("../assets/cap-gap.svg").default} alt="cap-gap" />
@@ -102,8 +103,8 @@ function Section2() {
         <SDescription>
           {`이 세리프끼리 만나면서 다른 서체에서 볼 수 없었던 조합의 Ligature*가
           자연스럽게 형성된다. 이외에도 코드 작성에서 빈번히 나타나는 표현식(ex.
-          화살표 함수 "=>")을 보다 편리하게 만들기 위해 특수문자 간의 조합도
-          지원한다.`}
+          자바스크립트의 화살표 함수 "=>")을 보다 편리하게 만들기 위해 특수문자
+          간의 조합도 지원한다.`}
           <FootNote>
             *Ligature: 2개 이상의 글자가 합쳐져서 하나의 모양을 이루는 것
           </FootNote>
